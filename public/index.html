@@ -3,21 +3,92 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Servicios</title>
-    <link rel="stylesheet" href="misestilos.css">
+    <meta charset="utf-8"> 
+      <meta name="description" content="Tarea de Recomendaciones"> 
+     
+      <link rel="stylesheet" href="estilos.css">
+    <title>Mi pagina de Recomendaciones</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.9.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.9.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.9.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.9.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.9.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    
   </head>
   <body>
-    <h1>Servicios</h1>
-    <form action="javascript:saludaHttp();">
-      <p><input type="text" id="nombre1" placeholder="Nombre 1"></p>
-      <p><input type="text" id="nombre2" placeholder="Nombre 2"></p>
-      <p>
-        <button type="submit">Saludar</button>
-      </p>
-      <footer>Copyright &copy; 2020 Gilberto Pacheco Gallegos.</footer>
-    </form>
+    <header id="cabeceralogo"> 
+      <div> 
+      <center>
+        <h1>RECOMENDACIONES...</h1> 
+        </center>
+      </div> 
+    </header> 
+    <center>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
     <script>
-      //@ts-check
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    </center>
+     <main> 
+      
+        <section id="articulosprincipales">    
+  <div class="">
+    <form action="javascript:reco();">
+        
+        <center>
+          <table border="5">
+            
+              <tr>
+                  <th colspan="2">Genero Musical</th>
+              </tr>
+              <tr>
+                  <td>Ingresa el genero: 
+                          <select name="lol" id="music">
+                              <!-- Opciones de la lista -->
+                              <option value="1"></option>
+                              <option value="2">Pop</option>
+                              <option value="3">Regueton</option>
+                              <option value="4">Rock</option>
+                              <option value="5">Indie</option>
+                              
+                            </select>
+                            <td>Ingresa tu edad: <input type="number"  value="15" min="10"
+                              max="100" 
+                              id="music1">                        
+                  <td> 
+                    <button type="submit">Enviar</button>
+              </tr>
+          </table>
+        </center>
+      </form>
+  <script>
+    //@ts-check
 
       /** Envía los datos a la función en Internet. El modificador async indica
        * que la función probablemente no termine en el hilo principal y algunas
@@ -27,7 +98,7 @@
        * función termina correctamente o con error en algún momento futuro.
        * @returns {Promise} para indicar cuando termina correctamente o con
        *  error. */
-      async function saludaHttp() {
+       async function reco() {
         try {
           /** La función fetch envía los datos al servidor. El texto que recibe
            * como parámetro es la url que se invoca. El signo de interrogación
@@ -44,11 +115,11 @@
            * de la operación y toma la respuesta devuelta por el servidor.
            * @type {Response} */
           const respuestaHttp =
-            await fetch("saludo?nombre1="
+            await fetch("reco?music="
               // @ts-ignore
-              + encodeURIComponent(nombre1.value.trim())
+              + encodeURIComponent(music.value.trim())
               // @ts-ignore
-              + "&nombre2=" + encodeURIComponent(nombre2.value.trim()));
+              + "&music1=" + encodeURIComponent(music1.value.trim()));
           /* La property ok de la respuesta vale true si la conexión terminó
            * con éxito. */
           if (respuestaHttp.ok) {
@@ -71,6 +142,29 @@
           alert(e.message)
         }
       }
-    </script>
+</script>
+          </section>
+    
+  </main>
+  <footer id="pielogo"> 
+
+    <div> 
+      <section class="seccionpie"> 
+        <h1>Sitio Web</h1> 
+        <p><a href="index.html">5612801178</a></p> 
+        <p><a href="fotos.html">HTML</a></p> 
+        <p><a href="videos.html">CSS</a></p> 
+      </section> 
+      <section class="seccionpie"> 
+        <h1>Ayuda</h1> 
+        <p><a href="contacto.html"></a></p> 
+      </section> 
+      <section class="seccionpie"> 
+        <address>Mexico,Nezahualcoyotl</address> 
+        <address>GONZALEZ PEREZ HUGO ALBERTO IC42</address> 
+        <small>&copy; Derechos Reservados 2019</small> 
+      </section> 
+    </div> 
+  </footer> 
   </body>
 </html>
