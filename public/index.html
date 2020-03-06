@@ -26,6 +26,7 @@
       <div> 
       <center>
         <h1>RECOMENDACIONES...</h1> 
+        <h2>¡¡ARMY!!</h2>
         </center>
       </div> 
     </header> 
@@ -62,28 +63,32 @@
     <form action="javascript:reco();">
         
         <center>
-          <table border="5">
-            
-              <tr>
-                  <th colspan="2">Genero Musical</th>
+          <th colspan="2">¿Te gusta BTS?</th>
               </tr>
               <tr>
-                  <td>Ingresa el genero: 
-                          <select name="lol" id="music">
+                  <td>Selecciona tu integrante favorito: 
+                          <select name="integrante" id="bts">
                               <!-- Opciones de la lista -->
-                              <option value="1"></option>
-                              <option value="2">Pop</option>
-                              <option value="3">Regueton</option>
-                              <option value="4">Rock</option>
-                              <option value="5">Indie</option>
+                              <option value="1">Kim NamJoon</option>
+                              <option value="2">Kim SeokJin</option>
+                              <option value="3">Min YoonGi</option>
+                              <option value="4">Jung HoSeok</option>
+                              <option value="5">Park Jimin</option>
+                              <option value="6">Kim TaeHyung</option>
+                              <option value="7">Jeon JungKook</option>
+                              <option value="8">Todos</option>
                               
                             </select>
-                            <td>Ingresa tu edad: <input type="number"  value="15" min="10"
+					 
+                            <td>Ingresa tu edad: <input type="number" name="numero" value="15" min="10"
                               max="100" 
-                              id="music1">                        
-                  <td> 
-                    <button type="submit">Enviar</button>
+                              id="edad">
+                              
+                  <td><button type="submit">Enviar</button>
+
+                  </td>
               </tr>
+           
           </table>
         </center>
       </form>
@@ -115,11 +120,11 @@
            * de la operación y toma la respuesta devuelta por el servidor.
            * @type {Response} */
           const respuestaHttp =
-            await fetch("reco?music="
+            await fetch("reco?bts="
               // @ts-ignore
-              + encodeURIComponent(music.value.trim())
+              + encodeURIComponent(bts.value.trim())
               // @ts-ignore
-              + "&music1=" + encodeURIComponent(music1.value.trim()));
+              + "&edad=" + encodeURIComponent(edad.value.trim()));
           /* La property ok de la respuesta vale true si la conexión terminó
            * con éxito. */
           if (respuestaHttp.ok) {
@@ -150,19 +155,9 @@
 
     <div> 
       <section class="seccionpie"> 
-        <h1>Sitio Web</h1> 
-        <p><a href="index.html">5612801178</a></p> 
-        <p><a href="fotos.html">HTML</a></p> 
-        <p><a href="videos.html">CSS</a></p> 
-      </section> 
-      <section class="seccionpie"> 
-        <h1>Ayuda</h1> 
-        <p><a href="contacto.html"></a></p> 
-      </section> 
-      <section class="seccionpie"> 
-        <address>Mexico,Nezahualcoyotl</address> 
-        <address>GONZALEZ PEREZ HUGO ALBERTO IC42</address> 
-        <small>&copy; Derechos Reservados 2019</small> 
+        <address>Mexico,Edo. Mexico Nezahualcoyotl</address> 
+        <address>Valencia Rosas Ivana Daniela</address> 
+        <small>&copy;Universidad Tecnologica de Nezahualcoyotl, Derechos Reservados 2020</small> 
       </section> 
     </div> 
   </footer> 
