@@ -1,0 +1,175 @@
+* { 
+  margin: 0px; 
+  padding: 0px; 
+} 
+#cabeceralogo { 
+  width: 96%; 
+  height: 150px; 
+  padding: 0% 2%; 
+  background-color: #D287F2;
+  
+} 
+table{
+	background-color: white;
+	text-aling: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+#cabeceralogo > div { 
+  max-width: 960px; 
+  margin: 0px auto; 
+  padding-top: 45px; 
+} 
+#cabeceralogo h1 { 
+  font: bold 100px Bradley Hand ITC, sans-serif; 
+  color: #FFE1E1; 
+} 
+#menuprincipal { 
+  width: 96%; 
+  height: 50px; 
+    padding: 0% 2%; 
+  background-color: #C71BFF; 
+   
+} 
+#menuprincipal > div { 
+ max-width: 960px; 
+  margin: 0px auto; 
+} 
+#menuprincipal li { 
+  display: inline-block; 
+  height: 35px; 
+  padding: 15px 10px 0px 10px; 
+  margin-right: 5px; 
+} 
+#menuprincipal li:hover { 
+  background-color: #6FACC6; 
+} 
+#menuprincipal a { 
+  font: bold 18px Arial, sans-serif; 
+  color: #F9F8F; 
+  text-decoration: none; 
+} 
+main { 
+  width: 96%; 
+  padding: 2%; 
+  background-image: url("Imagenes Danny/acua.jpg"); 
+} 
+main > div { 
+ max-width: 960px; 
+  margin: 0px auto; 
+	
+} 
+#articulosprincipales {
+  float: left; 
+  width: 65%; 
+  padding-top: 30px;  
+  border-radius: 10px; 
+	margin: 5px; 
+		
+} 
+table{
+	background-color: white;
+	text-aling: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+th,td{
+	border: solid 5px #9F19B7;
+	padding: 10px;
+}
+thead{
+	background-color: #D996EF;
+	color: #6D07B0;
+}
+#infoadicional { 
+  float: right; 
+  width: 29%; 
+  padding: 2%;  
+  border-radius: 10px; 
+} 
+#infoadicional h1 { 
+  font: bold 34px Arial, sans-serif; 
+  color: #000000; 
+  margin-bottom: 15px; 
+} 
+section video{
+	align-content: center;
+	
+}
+.recuperar { 
+  clear: both; 
+} 
+article { 
+  position: relative; 
+    padding: 0px 40px 20px 40px; 
+} 
+article time { 
+  display: block; 
+  position: absolute; 
+  top: -5px; 
+  left: -70px; 
+  width: 80px; 
+  padding: 15px 5px; 
+  background-color: #FF9090; 
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7); 
+  border-radius: 5px; 
+} 
+.numerodia { 
+  font: bold 36px Verdana, sans-serif; 
+  color: #FF9090; 
+  text-align: center; 
+} 
+.nombredia { 
+  font: 12px Verdana, sans-serif; 
+  color: #FF9090; 
+  text-align: center; 
+} 
+article h1 { 
+  margin-bottom: 5px; 
+  font: bold 30px Georgia, sans-serif; 
+} 
+article p { 
+  font: 18px Georgia, sans-serif; 
+} 
+figure { 
+  margin: 10px 0px; 
+} 
+figure img { 
+ max-width: 98%; 
+  padding: 1%; 
+  border: 1px solid; 
+} 
+#pielogo { 
+  display: flex; 
+  justify-content: center; 
+  width: 96%; 
+  padding: 2%; 
+  background-color: #C71BFF; 
+} 
+#pielogo > div { 
+  display: flex; 
+  flex: 1; 
+  max-width: 960px; 
+  background-color: #F28CF2; 
+  border-radius: 10px; 
+} 
+.seccionpie { 
+  float: left; 
+  width: 27.33%; 
+  padding: 3%; 
+} 
+.seccionpie { 
+  flex: 1; 
+  padding: 25px; 
+} 
+.seccionpie h1 { 
+  font: bold 20px Arial, sans-serif; 
+} 
+.seccionpie p { 
+  margin-top: 5px; 
+} 
+.seccionpie a { 
+  font: bold 16px Arial, sans-serif; 
+  color: #230139; 
+  text-decoration: none; 
+} 
